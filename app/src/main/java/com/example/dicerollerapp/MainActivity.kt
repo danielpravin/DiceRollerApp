@@ -23,12 +23,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.ui.draw.shadow
 import com.example.dicerollerapp.ui.theme.DiceRollerAppTheme
 import kotlin.random.Random
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,7 +58,7 @@ fun handleDiceRoll(): Int{
 
 @Composable
 fun DiceRoller( modifier: Modifier = Modifier) {
-    var diceNumber by remember { mutableIntStateOf(0) }
+    var diceNumber by remember { mutableIntStateOf(-1) }
     Column (
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -91,11 +93,24 @@ fun DiceRoller( modifier: Modifier = Modifier) {
         }
 
         Spacer(modifier = Modifier.height(16.dp))
-        Text(
-            text = "$diceNumber",
-            color = Color.Red,
-            fontSize = 20.sp
-        )
+        if (diceNumber > 0) {
+            Image(
+                painter = painterResource(id = getDiceImage(diceNumber)),
+                contentDescription = "Dice face $diceNumber"
+            )
+        }
+    }
+}
+
+fun getDiceImage(number: Int): Int {
+    return when (number) {
+        1 -> R.drawable.dice1
+        2 -> R.drawable.dice2
+        3 -> R.drawable.dice3
+        4 -> R.drawable.dice4
+        5 -> R.drawable.dice5
+        6 -> R.drawable.dice6
+        else -> R.drawable.dice0 // fallback
     }
 }
 
