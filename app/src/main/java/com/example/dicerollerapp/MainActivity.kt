@@ -58,7 +58,7 @@ fun handleDiceRoll(): Int{
 
 @Composable
 fun DiceRoller( modifier: Modifier = Modifier) {
-    var diceNumber by remember { mutableIntStateOf(-1) }
+    var diceNumber by remember { mutableIntStateOf(0) }
     Column (
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -93,7 +93,7 @@ fun DiceRoller( modifier: Modifier = Modifier) {
         }
 
         Spacer(modifier = Modifier.height(16.dp))
-        if (diceNumber > 0) {
+        if (diceNumber >= 0) {
             Image(
                 painter = painterResource(id = getDiceImage(diceNumber)),
                 contentDescription = "Dice face $diceNumber"
