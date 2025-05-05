@@ -1,8 +1,8 @@
-# 🎲 Dice Roller App
+# Dice Roller App
 
 This is a simple interactive **Dice Roller app** built using **Jetpack Compose** for Android. The app lets users roll a virtual dice with the tap of a button and displays the corresponding dice image.
 
-## 🚀 Features
+## Features
 
 - Roll a 6-sided dice with a single button press
 - Randomly displays dice images (`dice1` to `dice6`)
@@ -10,16 +10,12 @@ This is a simple interactive **Dice Roller app** built using **Jetpack Compose**
 - Material 3 styled button with elevation and shadow
 - Built using Jetpack Compose
 
-## 📱 Screenshots
+## Screenshots
+| <div align="center">Initial Screen</div> | <div align="center">After "Roll Dice" Clicked</div> |
+|:--:|:--:|
+| <img src="https://github.com/user-attachments/assets/830f43e6-1492-4649-b7eb-4dc505f53a43" width="300"/> | <img src="https://github.com/user-attachments/assets/dd1a45c0-52ff-4f20-a8f5-ee04e332aa00" width="300"/> |
 
-Initial Screen
-![image](https://github.com/user-attachments/assets/830f43e6-1492-4649-b7eb-4dc505f53a43)
-
-After "Roll Dice" Clicked
-![image](https://github.com/user-attachments/assets/dd1a45c0-52ff-4f20-a8f5-ee04e332aa00)
-
-
-## 🛠️ Getting Started
+## 🛠Getting Started
 
 ### Prerequisites
 
